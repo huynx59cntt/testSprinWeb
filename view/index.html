@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+     
+    <main>
+        <section class="banner">
+            <div class="banner-img"><img src="/img/banner_camera.png" class="w-100 h-100" alt=""></div>
+            <div class="banner-title"> <img src="/img/birhday.png" alt=""> </div>
+            <div class="banner-event"><a href="#gift">CLICK NGAY CÓ QUÀ</a></div>
+        </section>
+
+    <section class="content">               
+    <div class="content-gift" id="gift">
+        <div class="container content-form">
+            <h2>Hướng dẫn săn quà</h2>
+            <div class="content-register-gift ">
+                <form action="" method="post">
+                    <div class="row">
+                        <div class="col-md-6 form-input">  
+                            <input type="text" class="w-100" placeholder="Họ Tên" required>
+                            <!-- <div class="valid-feedback text-dark">Valid.</div>
+                            <div class="invalid-feedback text-primary">Please fill out this field.</div> -->
+                        </div>
+                        <div class="col-md-6 form-input" > 
+                             <input type="text" class="w-100" placeholder="Email" required>
+                            </div>
+                        <div class="col-md-12 form-input">
+                            <input type="text" class="w-100" placeholder="Số điển thoại" required>
+                        </div>
+                        <div class="col-md-12 form-input">
+                            <textarea  rows="6" class="w-100" placeholder="Công ty" required></textarea>
+                        </div>
+                        <div class="col-md-12 form-input  form-input-submit text-center" >
+                            <input type="submit" id="register" value="ĐĂNG KÝ" class="w-50" placeholder="Số điển thoại">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="panel panel-primary" id="play">
+            <div class="panel-body">    
+                <div class="slotwrapper d-flex" id="example2">
+                    <div class="flex-fill">
+                        <ul>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                        </ul>
+                    </div>
+                    <div class="flex-fill">
+                        <ul>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                        </ul>
+                    </div>
+                    <div class="flex-fill">
+                        <ul>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                            <li><img src="../img/p0.PNG"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <div class="sprin-button">
+                    <button type="button "  class="btn btn-success btn-lg invisible" id="btn-example2">Start Spin!</button>
+                </div>
+        </div>
+ 
+        </div>
+        </section>
+    </main>
+
+
+    
+   
+
+       <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../js/sprin.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.banner').addClass('banner-loaded');
+            
+        $('#btn-example2').click(function() {
+            var num1 = $('#txt-example2-1').val();
+            var num2 = $('#txt-example2-2').val();
+            var num3 = $('#txt-example2-3').val();
+            $('#example2 ul').playSpin({
+                endNum: [num1, num2, num3],
+                stopSeq: 'leftToRight'
+            });
+        });
+
+        $('#register').click(function(){
+            $('.content-register-gift').addClass('invisible');
+            $('#play').addClass('canplay');
+            $('#btn-example2').removeClass('invisible');
+            $('.panel').css("visibility", 'visible');
+        });
+        });
+    </script>
+</body>
+</html>

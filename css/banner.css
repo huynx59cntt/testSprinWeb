@@ -1,0 +1,138 @@
+*{
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+@keyframes animatePic {
+    10% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    90% {
+      transform: rotate(10deg);
+    }
+  }
+.banner{
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+}
+.banner-title{
+    position: absolute;
+    top: 25%;
+    left: 12%;
+}
+.banner-title img{
+    width: 9rem;
+    border-radius: 100%;
+    animation: animatePic 5s infinite;
+}
+.banner-event{
+    position: absolute;
+    top: 56%;
+    right: 20.5%;
+}
+.banner-event a{
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+.banner-event a:hover{
+   cursor: pointer;
+   color: #fff;
+}
+.banner-event a:link{
+    text-decoration: none;
+   
+ }
+.banner-loaded {
+    opacity: 1;
+  }
+
+  
+@media screen and (min-width: 320px) {
+  
+    .banner-title img{
+        width: 2.4rem;
+    }
+    .banner-event a{
+        font-size: 8px;
+    }
+}
+@media screen and (min-width: 350px) {
+  
+    .banner-title img{
+        width: 2.7rem;
+    }
+    .banner-event a{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 430px) {
+  
+    .banner-title img{
+        width: 3.5rem;
+    }
+    .banner-event a{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 576px) {
+  
+    .banner-title img{
+        width: 4rem;
+    }
+    .banner-event a{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-width: 724px) {
+    .banner-title img{
+        width: 5rem;
+    }
+    .banner-event a{
+        font-size: 19px;
+    }
+
+}
+@media screen and (min-width: 824px) {
+    .banner-title img{
+        width: 6rem;
+    }
+    .banner-event a{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    .banner-title img{
+        width: 7rem;
+    }
+    .banner-event a{
+        font-size: 27px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .banner-title img{
+        width: 8rem;
+    }
+    .banner-event a{
+        font-size: 28px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .banner-title img{
+        width: 9rem;
+    }
+    .banner-event a{
+        font-size: 32px;
+    }
+}
